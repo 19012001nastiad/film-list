@@ -1,0 +1,204 @@
+body {
+    background-color: whitesmoke;
+    color: black;
+    font-family: Arial;
+
+}
+.home {
+    display: flex;
+ }
+
+.desc {
+    display: flex;
+    flex: 1;
+    color: black;
+    font-size: 20px;
+    font-family: sans-serif;
+    justify-content: center;
+    margin-top: 1%;
+   }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+     border-radius: 10px;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+     border-radius: 10px;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
+     border-radius: 10px;
+}
+
+#table-film {
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#table-film td,
+#table-film th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#table-film tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#table-film tr:hover {
+    background-color: #ddd;
+}
+
+#table-film th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: black;
+    color: white;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+input[type='text'],select {
+    width: 100%;
+    padding: 15px 25px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 15px 25px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 15px;}
+.submit-btn: hover {background: #da190b;}
+}
+
+.srt-btn {
+    background-color: lightblue;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    margin: 4px 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+.srt-btn:hover {
+  background-color: black;
+  color: powderblue;
+}
+
+.desc-btn {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.desc-btn {
+  background-color: lightblue;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.desc-btn:hover {opacity: 0.6}
+
+.modal-h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,4,1,0.5);
+    transition: 0.5;
+    width:40%;
+}
+
+.card:hover {
+    box-shadow:  8px 16px 0 rgba(1,0,5,0.1);
+}
+
+.container {
+    padding: 12px 16px;
+}
+
+.pic {
+    width: 30%;
+  width: 400px;
+      height: 500px;
+      object-fit: cover;
+      object-position: 60% 40%;
+      animation: mymove 8s ;
+  }
+  @keyframes mymove {
+      30% {
+          object-position: 40% 20%;
+      }
+      45% {
+          object-position: 20% 0%;
+      }
+      70% {
+          object-position: 100% 100%;
+      }
+  }
