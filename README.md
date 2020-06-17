@@ -1,1 +1,2 @@
-Ссылка на стараницу приложения [Кино-гид](https://lxxkll.github.io/movies-gid/#/)
+#  Запус проекта проиллюстрирован 
+[Здесь](https://19012001nastiad.github.io/film-list)

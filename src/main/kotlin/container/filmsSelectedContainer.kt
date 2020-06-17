@@ -48,7 +48,7 @@ val filmsSelectedHoc =
                 { index ->
                     {
                         dispatch(DeleteFromWant(index))
-                    }
+                    ;lo
                 }
         }
     )
