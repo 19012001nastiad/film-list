@@ -12,14 +12,14 @@ import react.*
 import react.dom.*
 import kotlin.browser.document
 
-interface FilmsToWatchProps : RProps {
+interface FilmsSelectedProps : RProps {
     var films: Array<Film>
     var add: (Int) -> (Event) -> (Unit)
     var del: (Int) -> (Event) -> (Unit)
 }
 
-val fFilmsToWatch =
-    functionalComponent<FilmsToWatchProps> {
+val fFilmsSelected =
+    functionalComponent<FilmsSelectedProps> {
         h2 { +"Список фильмов к просмотру" }
         table {
             attrs.id = "table-film"
@@ -86,7 +86,7 @@ fun RBuilder.filmsToWatch(
     add: (Int) -> (Event) -> (Unit),
     del: (Int) -> (Event) -> (Unit)
 ) = child(
-    withDisplayName("FilmsToWatch", fFilmsToWatch)
+    withDisplayName("FilmsSelected", fFilmsSelected)
 ) {
     attrs.films = films
     attrs.add = add

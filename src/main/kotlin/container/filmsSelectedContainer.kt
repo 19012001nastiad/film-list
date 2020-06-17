@@ -1,7 +1,7 @@
 package container
 
-import components.FilmsToWatchProps
-import components.fFilmsToWatch
+import components.FilmsSelectedProps
+import components.fFilmsSelected
 import data.Film
 import data.State
 import hoc.withDisplayName
@@ -15,24 +15,24 @@ import redux.DeleteFromWant
 import redux.RAction
 import redux.WrapperAction
 
-interface FilmsToWatchDispatchProps : RProps {
+interface FilmsSelectedDispatchProps : RProps {
     var add: (Int) -> (Event) -> Unit
     var del: (Int) -> (Event) -> Unit
 }
 
-interface FilmsToWatchStateProps : RProps {
+interface FilmsSelectedStateProps : RProps {
     var films: Array<Film>
 }
 
-val filmsToWatchHoc =
+val filmsSelectedHoc =
     rConnect<
             State,
             RAction,
             WrapperAction,
             RProps,                         // Own Props
-            FilmsToWatchStateProps,
-            FilmsToWatchDispatchProps,
-            FilmsToWatchProps
+            FilmsSelectedStateProps,
+            FilmsSelectedDispatchProps,
+            FilmsSelectedProps
             >(
         mapStateToProps = { state, _ ->
             films = state.films
@@ -54,12 +54,12 @@ val filmsToWatchHoc =
     )
 
 
-val filmsToWatchRClass =
+val filmsSelectedRClass =
     withDisplayName(
-        "FilmsToWatch",
-        fFilmsToWatch
+        "FilmsSelected",
+        fFilmsSelected
     )
-        .unsafeCast<RClass<FilmsToWatchProps>>()
+        .unsafeCast<RClass<FilmsSelectedProps>>()
 
-val filmsToWatchContainer =
-    filmsToWatchHoc(filmsToWatchRClass)
+val filmsSelectedContainer =
+    filmsSelectedHoc(filmsSelectedRClass)

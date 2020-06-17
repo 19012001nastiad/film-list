@@ -8,14 +8,14 @@ import org.w3c.dom.events.Event
 import react.dom.*
 
 
-interface FilmFullProps : RProps {
+interface FilmPageProps : RProps {
     var index: Int
     var films: Array<Film>
     var add: (Int) -> (Event) -> (Unit)
 }
 
-val fFilmFull =
-    functionalComponent<FilmFullProps> {
+val fFilmPage =
+    functionalComponent<FilmPageProps> {
         div("card") {
             img(classes = "pic") {
                 attrs.src = "${it.films[it.index].picture}"
@@ -40,12 +40,12 @@ val fFilmFull =
         }
     }
 
-fun RBuilder.fullFilms(
+fun RBuilder.pageFilms(
     index: Int,
     films: Array<Film>,
     add: (Int) -> (Event) -> (Unit)
 ) = child(
-    withDisplayName("FilmFull", fFilmFull)
+    withDisplayName("FilmPage", fFilmPage)
 ) {
     attrs.index = index
     attrs.films = films

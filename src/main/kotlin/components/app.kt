@@ -1,8 +1,8 @@
 package components
 import container.ffilmListContainer
-import container.filmFullContainer
+import container.filmPageContainer
 import container.filmListContainer
-import container.filmsToWatchContainer
+import container.filmsSelectedContainer
 import container.topFilmsContainer
 import data.Film
 import data.Genre
@@ -48,7 +48,7 @@ fun fApp() =
                 render = renderObject(
                     { props.films[it] },
                     { index, _ ->
-                        filmFullContainer {
+                        filmPageContainer {
                             attrs.index = index
                         }
                     }
@@ -60,7 +60,7 @@ fun fApp() =
                 )
             route("/want",
                 exact = true,
-                render = { filmsToWatchContainer{} }
+                render = { filmsSelectedContainer{} }
             )
             route("/watched",
                 exact = true,

@@ -1,7 +1,7 @@
 package container
 
-import components.FilmFullProps
-import components.fFilmFull
+import components.FilmPageProps
+import components.fFilmPage
 import data.*
 import hoc.withDisplayName
 import org.w3c.dom.events.Event
@@ -9,28 +9,28 @@ import react.*
 import react.redux.rConnect
 import redux.*
 
-interface FilmFullDispatchProps : RProps {
+interface FilmPageDispatchProps : RProps {
     var add: (Int)->(Event) -> Unit
 }
 
-interface FilmFullStateProps: RProps {
+interface FilmPageStateProps: RProps {
     var films: Array<Film>
     var index: Int
 }
 
-interface FilmFullOwnProps : RProps {
+interface FilmPageOwnProps : RProps {
     var index: Int
 }
 
-val filmFullHoc =
+val filmPageHoc =
     rConnect<
             State,
             RAction,
             WrapperAction,
-            FilmFullOwnProps,                         // Own Props
-            FilmFullStateProps,
-            FilmFullDispatchProps,
-            FilmFullProps
+            FilmPageOwnProps,                         // Own Props
+            FilmPageStateProps,
+            FilmPageDispatchProps,
+            FilmPageProps
             >(
         mapStateToProps = { state, _ ->
             films = state.films
@@ -45,12 +45,12 @@ val filmFullHoc =
         }
     )
 
-val filmFullRClass =
+val filmPageRClass =
     withDisplayName(
-        "FilmFull",
-        fFilmFull
+        "FilmPage",
+        fFilmPage
     )
-        .unsafeCast<RClass<FilmFullProps>>()
+        .unsafeCast<RClass<FilmPageProps>>()
 
-val filmFullContainer =
-    filmFullHoc(filmFullRClass)
+val filmPageContainer =
+    filmPageHoc(filmPageRClass)

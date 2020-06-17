@@ -29,7 +29,7 @@ val fTopHoc =
             State,
             RAction,
             WrapperAction,
-            RProps,                         // Own Props
+            RProps,
             TopFilmStateProps,
             TopFilmDispatchProps,
             TopFilms
