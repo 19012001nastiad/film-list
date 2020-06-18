@@ -55,17 +55,17 @@ fun addReducer(state: State, action: RAction) =
             val picture = document.getElementById("picture") as HTMLInputElement
             val desc = document.getElementById("desc") as HTMLInputElement
             val newFilm = Film(
-                name.value,
-                genreType.value,
-                year.value.toInt(),
-                actors.value,
-                picture.value,
-                desc.value,
+                if (name.value=="") "Нет названия" else name.value,
+                if (genreType.value=="") "Нет жанра" else genreType.value,
+                if (year.value=="") 0 else year.value.toInt(),
+                if (actors.value=="") "Актёры не указаны" else actors.value,
+                if (picture.value=="") "Нет ссылки на картинку" else picture.value,
+                if (desc.value=="") "Нет описания" else desc.value,
                 false,
                 false,
                 0,
-                ""
-            )
+                "")
+
             modal.style.display = "none"
             name.value = ""
             genreType.value = ""

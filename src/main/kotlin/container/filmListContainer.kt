@@ -29,7 +29,7 @@ val filmListHoc =
             State,
             RAction,
             WrapperAction,
-            RProps,                         // Own Props
+            RProps,
             FilmListStateProps,
             FilmListDispatchProps,
             FilmListProps
