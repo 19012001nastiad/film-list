@@ -29,7 +29,7 @@ val filmsSelectedHoc =
             State,
             RAction,
             WrapperAction,
-            RProps,                         // Own Props
+            RProps,
             FilmsSelectedStateProps,
             FilmsSelectedDispatchProps,
             FilmsSelectedProps
@@ -47,8 +47,8 @@ val filmsSelectedHoc =
             del =
                 { index ->
                     {
-                        dispatch(DeleteFromWant(index))
-                    ;lo
+                        dispatch(DeleteFromWant(index));
+                    }
                 }
         }
     )
